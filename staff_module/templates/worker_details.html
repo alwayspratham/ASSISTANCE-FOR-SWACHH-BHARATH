@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px; /* Add some space below the table */
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .button {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none; /* Remove underline from link */
+            display: inline-block; /* Make it behave like a button */
+            margin-top: 20px; /* Add some space above the button */
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .back-button {
+            display: block; /* Make it a block element for full width */
+            text-align: center; /* Center the button */
+            margin: 20px auto; /* Center the button horizontally */
+            width: 200px; /* Set a fixed width for the button */
+        }
+    </style>
+</head>
+<body>
+    <h1>Worker Details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Visited At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if visited_links_data %}
+                {% for link in visited_links_data %}
+                <tr>
+                    <td>{{ link[0] }}</td>
+                    <td>{{ link[1] }}</td>
+                    <td>{{ link[2] }}</td>
+                    <td>{{ link[3] }}</td>
+                    <td>{{ link[4] }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="5">No worker details available.</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    <div class="back-button">
+        <a href="{{ url_for('staff_module.admin_dashboard') }}" class="button">Back to Admin Dashboard</a>
+    </div>
+</body>
+</html>

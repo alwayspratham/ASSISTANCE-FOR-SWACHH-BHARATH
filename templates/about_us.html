@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1517881914394-e14f0e6d3944');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+        }
+        h1, h3, p {
+            color: white;
+        }
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .cta-button:hover {
+            background-color: #218838;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 About Us 🌱</h1>
+        <h3>Our Mission 🚀</h3>
+        <p>To create awareness and inspire action for a cleaner and greener India. Join us in this nationwide initiative for a sustainable future.</p>
+
+        <h3>Our Team 👥</h3>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="" alt="Pratham">
+                <p><strong>Pratham Koparde</strong><br>Environmental Enthusiast</p>
+            </div>
+            <div class="team-member">
+                <img src="" alt="Somu">
+                <p><strong>Somesh Khavashi</strong><br>Social Worker</p>
+            </div>
+            <div class="team-member">
+                <img src="" alt="Ash">
+                <p><strong>Ashwath Talwar</strong><br>Community Leader</p>
+            </div>
+        </div>
+
+        <h3>Our Vision 💡</h3>
+        <p>A clean, green, and healthy India for generations to come. Let's work together to make it a reality.</p>
+
+        <marquee behavior="scroll" direction="left" style="font-size: 18px; color: yellow;">
+            "Cleanliness is next to godliness, and it starts with us."
+        </marquee>
+
+        <h3>Our Impact 📈</h3>
+        <p>Together, we have cleaned over 5000 locations and engaged 1000+ volunteers across the country!</p>
+
+        <a href="#" class="cta-button">Join the Movement as a Volunteer! 🌱</a>
+    </div>
+
+    <footer>
+        <p>Contact us at: <a href="mailto:support@cleanindia.org" style="color: #ffcc00;">support@cleanindia.org</a></p>
+        <p>&copy; 2025 Make Our India Clean Initiative. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
